@@ -1,0 +1,38 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}{% endblock %}</title>
+    <link rel="stylesheet" href="{% static './css/style.css' %}">
+    <link rel="stylesheet" href="{% static './css/index.css' %}">
+   <link href="https://fonts.googleapis.com/css2?family=Kanit&display=swap" rel="stylesheet">
+    <script src="{% static './lib/plotly-latest.min.js' %}"></script>
+
+
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="grid-nav">
+                <div class="logo">
+                    <a href="{% url 'index' %}">Modulation</a>
+                </div>
+                <div class="link">
+                    <ul>
+                        <li><a href="{% url 'index' %}">Home</a></li>
+                        <li><a href="{% url 'mod_signal'%}">Modulate</a></li>
+                        <li><a href="{% url 'about'%}">about</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    {% block content %}{% endblock %}
+
+</body>
+
+</html>

@@ -1,0 +1,56 @@
+.blog-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 10px;
+    padding: 30px;
+    margin: 30px;
+}
+
+.blog {
+    width: 100%;
+    border: 1px solid #3f4041;
+}
+
+.blog img {
+    display: block;
+    width: 100%;
+}
+
+.blog h3 {
+    padding: 10px;
+}
+
+.blog h3 a {
+    color: #000000;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+div.list {
+    margin-top: 40px;
+    border: 1px solid black;
+}
+
+.list h3 {
+    background-color: rgb(32, 32, 32);
+    color: #ffffff;
+    margin-bottom: 10px;
+    padding: 10px;
+}
+
+.link-list ul {
+    padding: 10px;
+}
+
+.link-list ul li {
+    padding-left: 10px;
+    list-style: none;
+    margin-top: 10px;
+    align-items: center;
+}
+
+.link-list ul li a {
+    color: #000000;
+    text-decoration: none;
+    text-transform: uppercase;
+}

@@ -1,0 +1,62 @@
+ {% extends 'frontend/base.html' %} 
+ {% block title %}Modulation{% endblock %}
+ {% load static %} 
+ {% block content %}
+
+<section>
+    <article>
+        <div class="content">
+            <h1>Modulation of Signal</h1>
+            <p></p>
+        </div>
+        <div class="contianer-Plotly">
+
+            <div class="form-plot">
+                <form action="">
+                    <!-- data of carrier -->
+                    <label for="amp-carr">Amplitude of Carrier Signal:</label>
+                    <input type="text" id="amp-carr" name="amp-carr"><br>
+                    <label for="freq-carr">Frequency of Carrier Signal:</label>
+                    <input type="text" id="freq-carr" name="freq-carr"><br>
+
+                    <!-- data of data signal -->
+                    <label for="amp-data">Amplitude of Data Signal:</label>
+                    <input type="text" id="amp-data" name="amp-data"><br>
+                    <label for="freq-data">Frequency of Data Signal:</label>
+                    <input type="text" id="freq-data" name="freq-data"><br>
+
+                    <button type="button" onclick="myFunction()">Submit</button>
+                    <button type="reset" onclick="Retry()">Retry</button>
+                    <p id="demo"></p>
+
+                </form>
+            </div>
+            <div id="graph">
+                <!-- Plotly chart will be drawn inside this DIV -->
+            </div>
+            <script src="{% static './js/plot.js' %}"></script>
+
+        </div>
+
+    </article>
+    <aside>
+        <div class="list">
+            <h3>List of content</h3>
+            <div class="link-list">
+                <ul>
+                    <li><a href="#">list content 1</a></li>
+                    <li><a href="#">list content 2</a></li>
+                    <li><a href="#">list content 3</a></li>
+                    <li><a href="#">list content 4</a></li>
+                    <li><a href="#">list content 5</a></li>
+                    <li><a href="#">list content 6</a></li>
+                    <li><a href="#">list content 7</a></li>
+                    <li><a href="#">list content 8</a></li>
+                    <li><a href="#">list content 9</a></li>
+                </ul>
+            </div>
+        </div>
+    </aside>
+</section>
+
+{% endblock %}
